@@ -1,0 +1,73 @@
+/* Full Header */
+.header {
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+}
+
+/* Amazon Logo on header */
+.header_logo {
+    width: 100px;
+    margin: 18px 20px 0px 20px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+/* search bar division */
+.header__search {
+    display: flex;
+    flex: 1;
+}
+
+/* Search Input */
+.header_searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+/* Search Icon next to input field */
+.header__searchIcon {
+    background-color: #cd9042;
+    padding: 5px;
+    height: 22px !important;
+}
+
+/* right 3 navigation links */
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__optionLineOne {
+    font-size: 13px;
+}
+
+.header__optionLineTwo {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+}
+
+.header__basketCount {
+    margin: 0 10px 0 10px;
+}

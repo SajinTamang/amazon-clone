@@ -2,11 +2,12 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import './App.css';
 
+import Header from "./components/Header";
 function App() {
   return (
     <Router>
       <div className="app">
-        <h1>Amazon Clone</h1>
+        <Header/>
         <Routes>
           <Route path="/" element={<h1>Home page</h1>} />
           <Route path="/checkout" element={<h1>Check out</h1>} />
