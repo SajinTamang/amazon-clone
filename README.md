@@ -5,4 +5,5 @@ Mini amazon Clone using React and Firebase
 * Amazon App
   * React Router
   * Hooks
-  *
+  * React Context API
+  * Material Ui
