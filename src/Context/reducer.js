@@ -1,26 +1,7 @@
 
 
-import SonyHeadphone from "../images/SonyHeadphone.jfif";
-
 export const initialState = {
-  basket: [
-    {
-      id: "12068",
-      title:
-        "Sony WH1000XM3 Wireless Noise Cancelling ,Overhead Headphones, Black",
-      price: 400,
-      rating:4,
-      image: SonyHeadphone,
-    },
-    {
-      id: "1206898",
-      title:
-        "Sony WH1000XM3 Wireless Noise Cancelling ,Overhead Headphones, Black",
-      price: 490,
-      rating: 4,
-      image: SonyHeadphone,
-    },
-  ],
+  basket: [],
   user:null,
 };
 
@@ -30,6 +11,11 @@ export const getBasketTotal= (basket)=> basket?.reduce((amount,item)=> item.pric
 const  reducer = (state, action) =>{
     console.log(action)
     switch(action.type){
+      case "SET_USER":
+        return{
+          ...state,
+          user:action.user
+        }
         case 'ADD_TO_BASKET':
             // Logic for adding item to basket
             return{
