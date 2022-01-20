@@ -4,6 +4,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
+import CheckOut from "./components/CheckOut";
 function App() {
   return (
     <Router>
@@ -16,7 +17,7 @@ function App() {
            />
           <Route 
           path="/checkout" 
-          element={<h1>Check out</h1>}
+          element={<CheckOut/>}
            />
           <Route 
           path="/login" 

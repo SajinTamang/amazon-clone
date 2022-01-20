@@ -1,5 +1,24 @@
-export const initialState={
-    basket:[],
+import SonyHeadphone from "../images/SonyHeadphone.jfif";
+export const initialState = {
+  basket: [
+    {
+      id: "12068",
+      title:
+        "Sony WH1000XM3 Wireless Noise Cancelling ,Overhead Headphones, Black",
+      price: "400",
+      rating: 4,
+      image: SonyHeadphone,
+    },
+    {
+      id: "1206898",
+      title:
+        "Sony WH1000XM3 Wireless Noise Cancelling ,Overhead Headphones, Black",
+      price: "490",
+      rating: 4,
+      image: SonyHeadphone,
+    },
+  ],
+  user:null,
 };
 
 
@@ -16,7 +35,19 @@ const  reducer = (state, action) =>{
 
         case 'REMOVE_FROM_BASKET':
         //    Logic for removing item from basket
-            return { state };  
+                let newBasket=[...state.basket];
+                const index= state.basket.findIndex((basketItem)=> basketItem.id === action.id)
+
+                if(index >= 0){
+                    // item exist s in basket, remove it 
+                    newBasket.splice(index,1);
+                }
+                else{
+                    console.warn(
+                        `cant remove product (id:${action.id}) as its not ` 
+                    )
+                }
+            return { ...state,basket:newBasket };  
             default:
         return state;
     }
