@@ -7,3 +7,4 @@ Mini amazon Clone using React and Firebase
   * Hooks
   * React Context API
   * Material Ui
+  * React Currency Format Library

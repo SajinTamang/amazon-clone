@@ -3,11 +3,14 @@ import { useStateValue } from '../Context/StateProvider';
 import CheckoutBanner from "../images/CheckoutBanner.png";
 import "./css/Checkout.css";
 import CheckOutProduct from './CheckOutProduct';
+import Subtotal from "./Subtotal";
+
 
 function CheckOut() {
     const [{basket}] = useStateValue();
-  return <div>
-        <img 
+  return <div className='checkout'>
+          <div className="checkout__left">
+             <img 
         src={CheckoutBanner} 
         alt="Amazon ad"
          className="checkout__ad" 
@@ -33,7 +36,15 @@ function CheckOut() {
            </div>
          )
          }
-  </div>;
+
+          </div>
+
+         {basket?.length>0 && ( 
+            <div className="checkout__right">
+                <Subtotal/>
+            </div>
+         )}
+         </div>;
 }
 
 export default CheckOut;
